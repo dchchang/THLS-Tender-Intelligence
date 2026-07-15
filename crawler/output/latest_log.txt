@@ -1,0 +1,12 @@
+﻿[2026-07-15 10:44:24] THLS crawler Phase 1 started
+[2026-07-15 10:44:24] BaseDir: C:\Users\David\Downloads\THLS-Tender-Intelligence-Phase1\THLS-Tender-Intelligence-Phase1\crawler
+[2026-07-15 10:44:24] Start URL: https://www.thls.com.tw/
+[2026-07-15 10:44:24] Allowed domains: www.thls.com.tw, thls.com.tw
+[2026-07-15 10:44:24] Max pages: 300
+[2026-07-15 10:44:24] Fetch 1/300: https://www.thls.com.tw/
+[2026-07-15 10:44:24] FAILED: 基礎連接已關閉: 無法為 SSL/TLS 安全通道建立信任關係。
+[2026-07-15 10:44:25] Pages fetched: 0
+[2026-07-15 10:44:25] Product candidates: 0
+[2026-07-15 10:44:25] PDF links: 0
+[2026-07-15 10:44:25] Failures: 1
+[2026-07-15 10:44:25] Phase 1 completed successfully

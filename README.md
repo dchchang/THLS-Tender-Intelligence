@@ -1,50 +1,35 @@
 # THLS Tender Intelligence
 
-AI Tender Matching Platform for THLS.
+THLS product website crawler and tender matching platform.
 
----
+## Phase 1 — THLS website crawler
 
-## Project Goals
+The crawler:
 
-This project will automatically:
+- starts from `https://www.thls.com.tw/`
+- stays within the configured THLS domain
+- discovers internal pages and PDF links
+- records successful pages and failures
+- identifies probable product pages
+- creates CSV, JSON, HTML, and log outputs
 
-- Crawl THLS website
-- Build THLS Product Database
-- Search PCC tenders
-- AI Product Matching
-- Generate HTML Reports
-- Generate Excel Reports
+## Run on Windows
 
----
+1. Open the `crawler` folder.
+2. Edit `settings.txt` if needed.
+3. Double-click `run_crawler.bat`.
+4. Review files in `crawler/output`.
 
-## Development Roadmap
+## Outputs
 
-### V9.0
+- `latest_report.html`
+- `latest_pages.csv`
+- `latest_product_candidates.csv`
+- `latest_pdf_links.csv`
+- `latest_failures.csv`
+- `latest_products.json`
+- `latest_log.txt`
 
-- THLS Website Crawler
+## Important
 
-### V9.1
-
-- Product Database Builder
-
-### V9.2
-
-- PDF Parser
-
-### V9.3
-
-- PCC Search Engine
-
-### V9.4
-
-- AI Match Engine
-
-### V9.5
-
-- Dashboard
-
----
-
-Author
-
-DCHCHANG
+This crawler records only pages that were actually fetched. It does not claim the whole site was scanned unless the crawl queue completes.
