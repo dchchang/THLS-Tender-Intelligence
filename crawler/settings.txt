@@ -1,0 +1,6 @@
+START_URL=https://www.thls.com.tw/
+ALLOWED_DOMAIN=www.thls.com.tw
+MAX_PAGES=300
+DELAY_MS=800
+DOWNLOAD_PDF=false
+SAVE_HTML=true
