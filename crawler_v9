@@ -1,1 +1,40 @@
+@echo off
+setlocal
 
+cd /d "%~dp0"
+
+echo THLS Website Crawler V9.0
+echo Folder: %CD%
+echo.
+
+set "SCRIPT=%CD%\src\thls_crawler.ps1"
+
+if not exist "%SCRIPT%" (
+    echo ERROR: Script file not found:
+    echo %SCRIPT%
+    echo.
+    pause
+    exit /b 1
+)
+
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%SCRIPT%" -BaseDir "%CD%"
+set "EXIT_CODE=%ERRORLEVEL%"
+
+echo.
+
+if not "%EXIT_CODE%"=="0" (
+    echo Crawler failed. Exit code: %EXIT_CODE%
+    echo Please check the output folder for the latest log.
+    pause
+    exit /b %EXIT_CODE%
+)
+
+echo Crawler completed.
+echo Opening output folder...
+
+if not exist "%CD%\output" mkdir "%CD%\output"
+start "" "%CD%\output"
+
+echo.
+pause
+endlocal
